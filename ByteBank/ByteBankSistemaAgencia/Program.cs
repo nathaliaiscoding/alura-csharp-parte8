@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ByteBank.ByteBankModelos;
 using ByteBank.ByteBankModelos.Funcionarios;
+using ByteBank.ByteBankSistemaAgencia.Comparadores;
 using ByteBank.ByteBankSistemaAgencia.Extensoes;
 
 namespace ByteBank.ByteBankSistemaAgencia
@@ -37,6 +38,28 @@ namespace ByteBank.ByteBankSistemaAgencia
             {
                 Console.WriteLine(nome);
             }
+
+            var contas = new List<ContaCorrente>()
+            {
+                new ContaCorrente(341, 57480),
+                new ContaCorrente(342, 45678),
+                new ContaCorrente(340, 1),
+                new ContaCorrente(340, 99999),
+                new ContaCorrente(340, 48950),
+                new ContaCorrente(290, 18950)
+            };
+
+            // contas.Sort(); ~~> Chamar a implementação dada em IComparable
+
+            contas.Sort(new ComparadorContaCorrentePorAgencia());
+
+            foreach (var conta in contas)
+            {
+                Console.WriteLine($"Conta número {conta.Numero}, ag. {conta.Agencia}");
+            }
+
+
+            Console.ReadLine();
         }
         static void TestaAdicionarComListExtensoes()
         {
@@ -60,7 +83,6 @@ namespace ByteBank.ByteBankSistemaAgencia
                 Console.WriteLine(idades[i]);
             }
 
-            Console.ReadLine();
         }
 
         static void TestaListaDeObject()
