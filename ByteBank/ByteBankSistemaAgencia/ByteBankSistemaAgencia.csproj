@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\ByteBankModelos\ByteBankModelos.csproj" />
+    <Project Include="2D792498-6233-436D-8980-3BA15D3A94B9" />
+    <Name Include="ByteBankModelos" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Humanizer" Version="2.11.10" />
+  </ItemGroup>
+
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+</Project>

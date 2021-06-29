@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ByteBankModelos</name>
+    </assembly>
+    <members>
+        <member name="T:ByteBank.ByteBankModelos.ContaCorrente">
+            <summary>
+             Classe para representar uma Conta Corrente do banco ByteBank.
+            </summary>
+        </member>
+        <member name="M:ByteBank.ByteBankModelos.ContaCorrente.Sacar(System.Double)">
+            <summary>
+            Realiza o saque e atualiza o valor da propriedade Saldo.
+            </summary>
+            <param name="valor"> Representa o valor do saque, deve ser maior que 0 e menor que o <see cref="P:ByteBank.ByteBankModelos.ContaCorrente.Saldo"/>.</param>
+            <exception cref="T:System.ArgumentException"> Exceção lançada quando um valor negativo é utilizado no argumento <paramref name="valor"/>.</exception>
+            <exception cref="T:ByteBank.ByteBankModelos.SaldoInsuficienteException"> Exceção lançada quando o valor de <paramref name="valor"/> é maior que o valor da propriedade <see cref="P:ByteBank.ByteBankModelos.ContaCorrente.Saldo"/>.</exception>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:ByteBank.ByteBankModelos.ContaCorrente.#ctor(System.Int32,System.Int32)" -->
+    </members>
+</doc>
