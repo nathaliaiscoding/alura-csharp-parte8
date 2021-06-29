@@ -1,12 +1,16 @@
-using System;
-using ByteBank.ByteBankModelos;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace ByteBank.ByteBankSistemaAgencia
 {
-    public class ListaDeContaCorrente
+    public class ListaDeObject
     {
-        private ContaCorrente[] _itens;
+        private object[] _itens;
         private int _proximaPosicao;
+
         public int Tamanho
         {
             get
@@ -14,36 +18,43 @@ namespace ByteBank.ByteBankSistemaAgencia
                 return _proximaPosicao;
             }
         }
-        public ListaDeContaCorrente(int capacidadeInicial = 5)
+
+        public ListaDeObject(int capacidadeInicial = 5)
         {
-            _itens = new ContaCorrente[capacidadeInicial];
+            _itens = new object[capacidadeInicial];
             _proximaPosicao = 0;
         }
 
-        public void Adicionar(ContaCorrente item)
+        public void MeuMetodo(string texto = "texti padrao", int numero = 5)
+        {
+
+        }
+
+        public void Adicionar(object item)
         {
             VerificarCapacidade(_proximaPosicao + 1);
 
+            // Console.WriteLine($"Adicionando item na posição {_proximaPosicao}");
+
             _itens[_proximaPosicao] = item;
             _proximaPosicao++;
-
-            Console.WriteLine($"Adicionando no índice {_proximaPosicao} numero {item.Agencia}/{item.Numero}");
         }
 
-        public void AdicionarVarios(params ContaCorrente[] itens)
+        public void AdicionarVarios(params object[] itens)
         {
-            foreach (ContaCorrente conta in itens)
+            foreach (object item in itens)
             {
-                Adicionar(conta);
+                Adicionar(item);
             }
         }
-        public void Remover(ContaCorrente item)
+
+        public void Remover(object item)
         {
             int indiceItem = -1;
 
             for (int i = 0; i < _proximaPosicao; i++)
             {
-                ContaCorrente itemAtual = _itens[i];
+                object itemAtual = _itens[i];
 
                 if (itemAtual.Equals(item))
                 {
@@ -51,6 +62,12 @@ namespace ByteBank.ByteBankSistemaAgencia
                     break;
                 }
             }
+
+            // Quero remover o 0x01
+
+            // [0x03] [0x04] [0x05] [null]
+            //                       ^
+            //                        ` _proximaPosicao
 
             for (int i = indiceItem; i < _proximaPosicao - 1; i++)
             {
@@ -60,14 +77,17 @@ namespace ByteBank.ByteBankSistemaAgencia
             _proximaPosicao--;
             _itens[_proximaPosicao] = null;
         }
-        public ContaCorrente GetItemNoIndice(int indice)
+
+        public object GetItemNoIndice(int indice)
         {
             if (indice < 0 || indice >= _proximaPosicao)
             {
                 throw new ArgumentOutOfRangeException(nameof(indice));
             }
+
             return _itens[indice];
         }
+
         private void VerificarCapacidade(int tamanhoNecessario)
         {
             if (_itens.Length >= tamanhoNecessario)
@@ -76,41 +96,30 @@ namespace ByteBank.ByteBankSistemaAgencia
             }
 
             int novoTamanho = _itens.Length * 2;
-
-            Console.WriteLine("Aumentando capacidade da lista!");
-
             if (novoTamanho < tamanhoNecessario)
             {
                 novoTamanho = tamanhoNecessario;
             }
 
-            ContaCorrente[] novoArray = new ContaCorrente[novoTamanho];
+            // Console.WriteLine("Aumentando capacidade da lista!");
+
+            object[] novoArray = new object[novoTamanho];
 
             for (int indice = 0; indice < _itens.Length; indice++)
             {
                 novoArray[indice] = _itens[indice];
+                // Console.WriteLine(".");
             }
 
             _itens = novoArray;
         }
 
-        public void EscreverListaNaTela()
-        {
-            for (int i = 0; i < _proximaPosicao; i++)
-            {
-                ContaCorrente conta = _itens[i];
-                Console.WriteLine($"Conta no índice {i}: numero {conta.Agencia} {conta.Numero}");
-            }
-        }
-
-        public ContaCorrente this[int indice]
+        public object this[int indice]
         {
             get
             {
                 return GetItemNoIndice(indice);
             }
         }
-
     }
-
 }

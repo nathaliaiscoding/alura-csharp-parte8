@@ -1,5 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using ByteBank.ByteBankModelos;
+using ByteBank.ByteBankModelos.Funcionarios;
 
 namespace ByteBank.ByteBankSistemaAgencia
 {
@@ -7,71 +12,139 @@ namespace ByteBank.ByteBankSistemaAgencia
     {
         static void Main(string[] args)
         {
-            Lista<int> idades = new Lista<int>();
+            List<int> idades = new List<int>();
 
-            idades.AdicionarVarios(63, 15, 21, 50);
-            idades.Remover(15);
+            idades.Add(1);
+            idades.Add(5);
+            idades.Add(14);
+            idades.Add(25);
+            idades.Add(38);
+            idades.Add(61);
 
-            Lista<string> cursos = new Lista<string>();
-            cursos.AdicionarVarios("C# Parte 1", "C# Parte 2", "C# Parte 3");
+            // ListExtensoes.AdicionarVarios(idades, 1, 5687, 1987, 1567, 987);
 
-            Lista<ContaCorrente> contas = new Lista<ContaCorrente>();
-            contas.AdicionarVarios(new ContaCorrente(124, 54354), new ContaCorrente(201, 44354));
+            idades.AdicionarVarios(5, 448, 7898, 4564);
 
-            Console.WriteLine($"Lista de Idades: {idades}");
-            Console.WriteLine($"Lista de Cursos: {cursos}");
-            Console.WriteLine($"Lista de Contas: {contas}");
+            // idades.Remove(5);
+
+            for (int i = 0; i < idades.Count; i++)
+            {
+                Console.WriteLine(idades[i]);
+            }
 
             Console.ReadLine();
-
         }
-        static void TestandoAdicionarVarios()
-        {
 
+        static void TestaListaDeObject()
+        {
+            ListaDeObject listaDeIdades = new ListaDeObject();
+
+            listaDeIdades.Adicionar(10);
+            listaDeIdades.Adicionar(5);
+            listaDeIdades.Adicionar(4);
+            listaDeIdades.Adicionar("um texto qualquer");
+            listaDeIdades.AdicionarVarios(16, 23, 60);
+
+            for (int i = 0; i < listaDeIdades.Tamanho; i++)
+            {
+                int idade = (int)listaDeIdades[i];
+                Console.WriteLine($"Idade no indice {i}: {idade}");
+            }
+        }
+
+        static int SomarVarios(params int[] numeros)
+        {
+            int acumulador = 0;
+            foreach (int numero in numeros)
+            {
+                acumulador += numero;
+            }
+            return acumulador;
+        }
+
+
+        static void TestaListaDeContaCorrente()
+        {
+            //ListaDeContaCorrente lista = new ListaDeContaCorrente();
             ListaDeContaCorrente lista = new ListaDeContaCorrente();
 
+            ContaCorrente contaDoGui = new ContaCorrente(11111, 1111111);
+
+            ContaCorrente[] contas = new ContaCorrente[]
+            {
+                contaDoGui,
+                new ContaCorrente(874, 5679787),
+                new ContaCorrente(874, 5679754)
+            };
+
+            lista.AdicionarVarios(contas);
+
             lista.AdicionarVarios(
-                new ContaCorrente(100, 40010),
-                new ContaCorrente(101, 40011)
+                contaDoGui,
+                new ContaCorrente(874, 5679787),
+                new ContaCorrente(874, 5679787),
+                new ContaCorrente(874, 5679787),
+                new ContaCorrente(874, 5679787),
+                new ContaCorrente(874, 5679787),
+                new ContaCorrente(874, 5679787),
+                new ContaCorrente(874, 5679787),
+                new ContaCorrente(874, 5679787)
             );
 
             for (int i = 0; i < lista.Tamanho; i++)
             {
-                ContaCorrente conta = lista.GetItemNoIndice(i);
-                Console.WriteLine($"{conta.Agencia}/{conta.Numero}");
+                ContaCorrente itemAtual = lista[i];
+                Console.WriteLine($"Item na posição {i} = Conta {itemAtual.Numero}/{itemAtual.Agencia}");
+            }
+        }
+
+
+
+        static void TestaArrayDeContaCorrente()
+        {
+            ContaCorrente[] contas = new ContaCorrente[]
+                {
+                    new ContaCorrente(874, 5679787),
+                    new ContaCorrente(874, 4456668),
+                    new ContaCorrente(874, 7781438)
+                };
+
+            for (int indice = 0; indice < contas.Length; indice++)
+            {
+                ContaCorrente contaAtual = contas[indice];
+                Console.WriteLine($"Conta {indice} {contaAtual.Numero}");
+            }
+        }
+
+        static void TestaArrayInt()
+        {
+            // ARRAY de inteiros, com 5 posições!
+            int[] idades = null;
+            idades = new int[3];
+
+            idades[0] = 15;
+            idades[1] = 28;
+            idades[2] = 35;
+            //idades[3] = 50;
+            //idades[4] = 28;
+            //idades[5] = 60;
+
+            Console.WriteLine(idades.Length);
+
+            int acumulador = 0;
+            for (int indice = 0; indice < idades.Length; indice++)
+            {
+                int idade = idades[indice];
+
+                Console.WriteLine($"Acessando o array idades no índice {indice}");
+                Console.WriteLine($"Valor de idades[{indice}] = {idade}");
+
+                acumulador += idade;
             }
 
+            int media = acumulador / idades.Length;
+            Console.WriteLine($"Média de idades = {media}");
         }
 
-        static void TestandoListaDeContas()
-        {
-            ListaDeContaCorrente lista = new ListaDeContaCorrente();
-
-            ContaCorrente conta = new ContaCorrente(111, 1111);
-
-            lista.Adicionar(conta);
-            lista.Adicionar(new ContaCorrente(345, 23462));
-            lista.Adicionar(new ContaCorrente(363, 22451));
-            lista.Adicionar(new ContaCorrente(735, 23552));
-            lista.Adicionar(new ContaCorrente(333, 23552));
-            lista.Adicionar(new ContaCorrente(456, 65423));
-            lista.Adicionar(new ContaCorrente(654, 87457));
-            lista.Adicionar(new ContaCorrente(334, 97348));
-            lista.Adicionar(new ContaCorrente(678, 65899));
-            lista.Adicionar(new ContaCorrente(735, 12223));
-            lista.Adicionar(new ContaCorrente(735, 98576));
-            lista.Adicionar(new ContaCorrente(735, 53534));
-            lista.Adicionar(new ContaCorrente(735, 56253));
-            lista.Adicionar(new ContaCorrente(735, 43657));
-            lista.Adicionar(new ContaCorrente(735, 77534));
-            lista.Adicionar(new ContaCorrente(735, 34436));
-            lista.Adicionar(new ContaCorrente(735, 98867));
-
-            lista.EscreverListaNaTela();
-            Console.WriteLine("conta removida");
-            lista.Remover(conta);
-            lista.EscreverListaNaTela();
-            Console.ReadLine();
-        }
     }
 }
