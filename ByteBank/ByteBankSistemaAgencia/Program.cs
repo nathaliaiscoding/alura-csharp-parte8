@@ -5,12 +5,21 @@ using System.Text;
 using System.Threading.Tasks;
 using ByteBank.ByteBankModelos;
 using ByteBank.ByteBankModelos.Funcionarios;
+using ByteBank.ByteBankSistemaAgencia.Extensoes;
 
 namespace ByteBank.ByteBankSistemaAgencia
 {
     class Program
     {
         static void Main(string[] args)
+        {
+            List<int> idades = new List<int>();
+            idades.AdicionarVarios(1, 5, 14, 25, 38, 61);
+
+            List<string> nomes = new List<string>();
+            nomes.AdicionarVarios("Adoniran", "Jimi Hendrix");
+        }
+        static void TestaAdicionarComListExtensoes()
         {
             List<int> idades = new List<int>();
 
