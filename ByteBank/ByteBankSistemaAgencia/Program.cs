@@ -13,11 +13,30 @@ namespace ByteBank.ByteBankSistemaAgencia
     {
         static void Main(string[] args)
         {
-            List<int> idades = new List<int>();
+            var idades = new List<int>();
             idades.AdicionarVarios(1, 5, 14, 25, 38, 61);
 
-            List<string> nomes = new List<string>();
-            nomes.AdicionarVarios("Adoniran", "Jimi Hendrix");
+            idades.Sort();
+
+            foreach (var idade in idades)
+            {
+                Console.WriteLine(idade);
+            }
+
+            var nomes = new List<string>()
+            {
+                "Vinícius",
+                "Gisele",
+                "Mayra",
+                "Vasco"
+            };
+
+            nomes.Sort();
+
+            foreach (var nome in nomes)
+            {
+                Console.WriteLine(nome);
+            }
         }
         static void TestaAdicionarComListExtensoes()
         {

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Nathalia\\OneDrive\\Documents\\Programacao\\ALURA\\alura-csharp-parte7\\ByteBank\\ByteBankModelos\\ByteBankModelos.csproj": {}
+    "C:\\Users\\Nathalia\\OneDrive\\Documents\\Programacao\\ALURA\\alura-csharp-parte8\\ByteBank\\ByteBankModelos\\ByteBankModelos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Nathalia\\OneDrive\\Documents\\Programacao\\ALURA\\alura-csharp-parte7\\ByteBank\\ByteBankModelos\\ByteBankModelos.csproj": {
+    "C:\\Users\\Nathalia\\OneDrive\\Documents\\Programacao\\ALURA\\alura-csharp-parte8\\ByteBank\\ByteBankModelos\\ByteBankModelos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nathalia\\OneDrive\\Documents\\Programacao\\ALURA\\alura-csharp-parte7\\ByteBank\\ByteBankModelos\\ByteBankModelos.csproj",
+        "projectUniqueName": "C:\\Users\\Nathalia\\OneDrive\\Documents\\Programacao\\ALURA\\alura-csharp-parte8\\ByteBank\\ByteBankModelos\\ByteBankModelos.csproj",
         "projectName": "ByteBankModelos",
-        "projectPath": "C:\\Users\\Nathalia\\OneDrive\\Documents\\Programacao\\ALURA\\alura-csharp-parte7\\ByteBank\\ByteBankModelos\\ByteBankModelos.csproj",
+        "projectPath": "C:\\Users\\Nathalia\\OneDrive\\Documents\\Programacao\\ALURA\\alura-csharp-parte8\\ByteBank\\ByteBankModelos\\ByteBankModelos.csproj",
         "packagesPath": "C:\\Users\\Nathalia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nathalia\\OneDrive\\Documents\\Programacao\\ALURA\\alura-csharp-parte7\\ByteBank\\ByteBankModelos\\obj\\",
+        "outputPath": "C:\\Users\\Nathalia\\OneDrive\\Documents\\Programacao\\ALURA\\alura-csharp-parte8\\ByteBank\\ByteBankModelos\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/ibaK0YE1QpZ2S4mb/BU2Sie69mYY11PS+DE/FWaLywat2D9dzX/bObLOakWdFSbd/bNcxWlL5uWgX7XnOmyAQ==",
+  "dgSpecHash": "M7zvqNekYMswlwA4nvJxnxEvCOZMnRk0naZgqbzTSwI8rCd7GAsQeroW8Pqusxf8hWkH3zuo7qBWmQoZlRBVYw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Nathalia\\OneDrive\\Documents\\Programacao\\ALURA\\alura-csharp-parte7\\ByteBank\\ByteBankSistemaAgencia\\ByteBankSistemaAgencia.csproj",
+  "projectFilePath": "C:\\Users\\Nathalia\\OneDrive\\Documents\\Programacao\\ALURA\\alura-csharp-parte8\\ByteBank\\ByteBankSistemaAgencia\\ByteBankSistemaAgencia.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Nathalia\\.nuget\\packages\\humanizer\\2.11.10\\humanizer.2.11.10.nupkg.sha512",
     "C:\\Users\\Nathalia\\.nuget\\packages\\humanizer.core\\2.11.10\\humanizer.core.2.11.10.nupkg.sha512",

@@ -1343,11 +1343,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Nathalia\\OneDrive\\Documents\\Programacao\\ALURA\\alura-csharp-parte7\\ByteBank\\ByteBankSistemaAgencia\\ByteBankSistemaAgencia.csproj",
+      "projectUniqueName": "C:\\Users\\Nathalia\\OneDrive\\Documents\\Programacao\\ALURA\\alura-csharp-parte8\\ByteBank\\ByteBankSistemaAgencia\\ByteBankSistemaAgencia.csproj",
       "projectName": "ByteBankSistemaAgencia",
-      "projectPath": "C:\\Users\\Nathalia\\OneDrive\\Documents\\Programacao\\ALURA\\alura-csharp-parte7\\ByteBank\\ByteBankSistemaAgencia\\ByteBankSistemaAgencia.csproj",
+      "projectPath": "C:\\Users\\Nathalia\\OneDrive\\Documents\\Programacao\\ALURA\\alura-csharp-parte8\\ByteBank\\ByteBankSistemaAgencia\\ByteBankSistemaAgencia.csproj",
       "packagesPath": "C:\\Users\\Nathalia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Nathalia\\OneDrive\\Documents\\Programacao\\ALURA\\alura-csharp-parte7\\ByteBank\\ByteBankSistemaAgencia\\obj\\",
+      "outputPath": "C:\\Users\\Nathalia\\OneDrive\\Documents\\Programacao\\ALURA\\alura-csharp-parte8\\ByteBank\\ByteBankSistemaAgencia\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
@@ -1368,8 +1368,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Nathalia\\OneDrive\\Documents\\Programacao\\ALURA\\alura-csharp-parte7\\ByteBank\\ByteBankModelos\\ByteBankModelos.csproj": {
-              "projectPath": "C:\\Users\\Nathalia\\OneDrive\\Documents\\Programacao\\ALURA\\alura-csharp-parte7\\ByteBank\\ByteBankModelos\\ByteBankModelos.csproj"
+            "C:\\Users\\Nathalia\\OneDrive\\Documents\\Programacao\\ALURA\\alura-csharp-parte8\\ByteBank\\ByteBankModelos\\ByteBankModelos.csproj": {
+              "projectPath": "C:\\Users\\Nathalia\\OneDrive\\Documents\\Programacao\\ALURA\\alura-csharp-parte8\\ByteBank\\ByteBankModelos\\ByteBankModelos.csproj"
             }
           }
         }
