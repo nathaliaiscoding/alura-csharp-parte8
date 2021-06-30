@@ -76,6 +76,13 @@ namespace ByteBank.ByteBankSistemaAgencia
                 }
             }
 
+            // var contasNaoNulas = contas.Where(conta => conta != null);
+            // var contasOrdenadas = contasNaoNulas.OrderBy(conta => conta.Numero);
+            // o método Where retorna o tipo IEnumerable<T> - o mesmo tipo usado pelo método de extensão OrderBy. Então podemos encadear nossas chamadas:
+            var contasOrdenadas = contas
+                .Where(conta => conta != null)
+                .OrderBy(conta => conta.Numero);
+
             Console.ReadLine();
         }
         static void TestaAdicionarComListExtensoes()
